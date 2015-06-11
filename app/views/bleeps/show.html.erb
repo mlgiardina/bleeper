@@ -1,4 +1,4 @@
 <%= @bleep.user.name %>
 <%= @bleep.body %>
-<%=link_to "Edit", controller: "bleeps", action: "update", id: @bleep.id %>
-<%= link_to "Delete", controller: "bleeps", action: "destroy", id: @bleep.id %>
+<%=link_to "Edit", controller: "bleeps", action: "edit", id: @bleep.id %>
+<%= button_to "Delete Bleep", { action: "destroy", id: @bleep.id }, method: :delete, data: {confirm: "Are you sure you want to permanently delete this bleep?" } %>

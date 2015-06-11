@@ -1,0 +1,6 @@
+<h3>Edit Bleep</h3>
+<%= form_for(@bleep) do |f| %>
+  <%= f.label :body, "Body" %>
+  <%= f.text_field :body, :value => @bleep.body %>
+  <%= f.submit %>
+<% end %>

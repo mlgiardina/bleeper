@@ -20,12 +20,29 @@ class BleepsController < ApplicationController
     render 'index.html.erb'
   end
 
-  def update
+  def edit
+    @bleep = Bleep.find(params[:id])
     render 'edit.html.erb'
+  end
+
+  def update
+    @new_bleep = Bleep.new
+    @user = User.where(name: Bleep.find(params[:id]).user.name).first
+    @bleeps = Bleep.all.order(:created_at)
+    Bleep.update(params[:id], bleep_params)
+    render 'index.html.erb'
   end
 
   def show
     @bleep = Bleep.find(params[:id])
+  end
+
+  def destroy
+    @new_bleep = Bleep.new
+    @bleeps = Bleep.all.order(:created_at)
+    @user = User.where(name: Bleep.find(params[:id]).user.name).first
+    Bleep.delete(params[:id])
+    render 'index.html.erb'
   end
 
   private
