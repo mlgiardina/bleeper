@@ -1,3 +1,5 @@
+Link to mockup: https://moqups.com/#!/edit/mlgiardina/9xPy7ulu
+
 ## Models - total time: 10 minutes
   -- User
     -- has_many :bleeps
@@ -26,6 +28,21 @@
   - user/create
   - user/edit
 
+## UMLs
+|Bleeper|
+|-------|	
+|create|	
+|show	|	
+|edit|
+|delete|
 
+- | belongs
+- |		to
+- V	 
 
-
+|User|
+|-----|
+|create|
+|show|
+|edit|
+|delete|	
