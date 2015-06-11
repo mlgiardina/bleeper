@@ -1,0 +1,2 @@
+class BleepsController < ApplicationController
+end
