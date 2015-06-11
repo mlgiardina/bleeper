@@ -6,6 +6,7 @@ class WelcomeController < ApplicationController
       render 'welcome/index.html.erb'
     rescue StandardError
       render 'welcome/index.html.erb'
+    end
   end
 
 end
