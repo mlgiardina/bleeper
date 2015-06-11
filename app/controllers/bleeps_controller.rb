@@ -20,6 +20,14 @@ class BleepsController < ApplicationController
     render 'index.html.erb'
   end
 
+  def update
+    render 'edit.html.erb'
+  end
+
+  def show
+    @bleep = Bleep.find(params[:id])
+  end
+
   private
 
   def bleep_params

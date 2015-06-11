@@ -1,0 +1,4 @@
+<%= @bleep.user.name %>
+<%= @bleep.body %>
+<%=link_to "Edit", controller: "bleeps", action: "update", id: @bleep.id %>
+<%= link_to "Delete", controller: "bleeps", action: "destroy", id: @bleep.id %>
