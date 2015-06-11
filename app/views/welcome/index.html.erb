@@ -1,0 +1,6 @@
+<h2>Welcome to Bleeper</h2>
+<h3>Log In: </h3>
+<%= form_for(@user) do |f| %>
+<%= f.text_field :name, placeholder: "Username" %>
+<%= f.submit "Log In" %>
+<% end %>

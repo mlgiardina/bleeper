@@ -7,8 +7,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <nav>
+      <h1>Bleeper</h1>
+      <%= link_to "Bleeps", controller: "bleeps", action: "index" %>
+      <%= link_to "Users", controller: "users", action: "index" %>
+    </nav>
+  </header>
 
-<%= yield %>
+  <div class="container">
+    <%= yield %>
+  </div>
+
+  <footer>
+    <%= params.inspect if Rails.env.development? %>
+  </footer>
 
 </body>
 </html>

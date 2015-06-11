@@ -1,0 +1,27 @@
+<h3>Bleeps</h3>
+
+<div class="bleep_box">
+
+<% @bleeps.each do |bleep| %>
+<div><%= bleep.user.name + ": " + bleep.body %></div>
+<% end %>
+</div>
+
+<% if @user %>
+  <div class="new_bleep_form">
+    <%= form_for(@new_bleep) do |f| %>
+    <%= f.hidden_field :user_id, value: @user.id %>
+    <%= f.text_field :body, placeholder: "Bleep Here" %>
+    <%= f.submit "Bleep!"%>
+    <% end %>
+  </div>
+<% else %>
+  <div class="login_form">
+    <h5>Log In: </h5>
+    <%= form_for(@user) do |f| %>
+    <%= f.text_field :name, placeholder: "Username" %>
+    <%= f.submit "Log In" %>
+    <% end %>
+  </div>
+<% end %>
+
